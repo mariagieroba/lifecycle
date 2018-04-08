@@ -1,3 +1,10 @@
+<p *ngFor = 'let log of logs'>
+  {{ log }}
+</p>
+
+Enter Array (comma-separated): <input [(ngModel)]="numbers" (onModelChange)="onModelChange" /> <br/>
+<numbers [numbers]="numbers.split('.')"></numbers>
+
 <div class="employee">
   <form #empForm="ngForm" (ngSubmit)="onFormSubmit(empForm)">
     <p>Name: <input name="name" [ngModel]="emp.name" /></p>
@@ -11,3 +18,4 @@
 </div>
 
 <app-onchanges [employee]="emp" [message]="msg"></app-onchanges>
+
